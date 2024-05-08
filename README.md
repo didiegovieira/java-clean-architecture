@@ -14,7 +14,7 @@ O Java é uma das linguagens de programação mais populares do mundo, conhecida
 > Para facilitar o processo de inicialização do projeto, fornecemos um script de shell que cuidará da instalação dos requisitos necessários no Linux e iniciará o Docker Compose.
 
 ```bash
-bahs ./start_project.sh
+bash ./start_project.sh
 ```
 
 ## Arquitetura Limpa (Clean Architecture)
