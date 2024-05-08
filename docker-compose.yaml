@@ -1,22 +1,58 @@
-version: '3'
+version: '3.3'
 
 services:
-  mysql:
-    image: mysql:latest
-    container_name: mysql_database
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: my_database
-      MYSQL_USER: db_user
-      MYSQL_PASSWORD: db_password
+  # mysql:
+  #   image: mysql:5.7
+  #   container_name: mysql
+  #   restart: always
+  #   environment:
+  #     MYSQL_DATABASE: 'clean_architecture'   
+  #     MYSQL_PASSWORD: 'root'      
+  #     MYSQL_ROOT_PASSWORD: 'root'
+  #   ports:
+  #     - '3306:3306'
+  #   expose:
+  #     - '3306'
+  #   volumes:
+  #     - './.mysql-data/db:/var/lib/mysql'
 
-  springboot-app:
+  # postgres:
+  #   container_name: postgres_container
+  #   image: postgres
+  #   environment:
+  #     POSTGRES_USER: root
+  #     POSTGRES_PASSWORD: root
+  #     PGDATA: /data/postgres
+  #   volumes:
+  #      - './.postgres-data/db:/var/lib/postgres'
+  #   ports:
+  #     - "5432:5432"
+  #   expose:
+  #     - "5432"
+  #   networks:
+  #     - local-network
+  #   restart: unless-stopped
+
+  java-app:
     build:
       context: .
-      dockerfile: Dockerfile
-    container_name: springboot_app
+      dockerfile: app/Dockerfile
+    restart: on-failure
+    container_name: java_app
     ports:
       - "8080:8080"
-    depends_on:
-      - mysql
+    # environment:
+      # SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/database?autoReconnect=true&useSSL=false
+    # depends_on:
+    #   - mysql
+    networks:
+      - local-network
+    stdin_open: true
+    tty: true
+    
+networks:
+  local-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
