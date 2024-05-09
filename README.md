@@ -1,44 +1,64 @@
-# Java e Clean Architecture
+# ☕ Java and Clean Architecture
 
-## Introdução
-O Java é uma das linguagens de programação mais populares do mundo, conhecida por sua portabilidade, robustez e ampla aplicação em diversos domínios, desde desenvolvimento de aplicativos móveis até sistemas de grande escala em empresas.
+<table>
+    <tr>
+        <td>
+            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
+        </td>
+        <td>
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+        </td>
+        <td>
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+        </td>
+        <td>
+            <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" />
+        </td>
+        <td>
+            <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+        </td>
+    </tr>
+</table>
+
+## 🚀 Introduction
+Java is one of the most popular programming languages in the world, known for its portability, robustness, and wide application in various domains, from mobile app development to large-scale enterprise systems.
 
 <img width="1000" src="https://hermes.dio.me/articles/cover/7b89fda2-4af3-4ae0-98bc-ad2b65854909.png" alt="terraform logo">
 
 
-## Requisitos
+## 📋 Requirements
 > [!IMPORTANT]
-> Para iniciar este projeto, você precisará ter o Docker e o Docker Compose instalados em sua máquina.
+> To start this project, you will need Docker and Docker Compose installed on your machine.
 
 > [!NOTE]
-> Para facilitar o processo de inicialização do projeto, fornecemos um script de shell que cuidará da instalação dos requisitos necessários no Linux e iniciará o Docker Compose.
+> To simplify the project initialization process, we provide a shell script that will handle the installation of necessary requirements on Linux and start Docker Compose.
 
 ```bash
 bash ./start_project.sh
 ```
 
-## Arquitetura Limpa (Clean Architecture)
-A Arquitetura Limpa, também conhecida como Clean Architecture, é um conjunto de práticas e princípios de design de software que visa criar sistemas que sejam modularizados, testáveis e independentes de frameworks externos. Desenvolvida por Robert C. Martin, a Clean Architecture promove a separação de preocupações, facilitando a manutenção, evolução e escalabilidade do código.
+## ✨ Clean Architecture
+Clean Architecture, also known as Clean Architecture, is a set of software design practices and principles aimed at creating systems that are modular, testable, and independent of external frameworks. Developed by Robert C. Martin, Clean Architecture promotes the separation of concerns, facilitating code maintenance, evolution, and scalability.
 
-## Benefícios do Java com Clean Architecture
-- **Modularidade**: A Clean Architecture incentiva a divisão do sistema em módulos independentes, o que é facilitado pelo sistema de pacotes do Java.
+## ✅ Benefits of Java with Clean Architecture
+- **Modularity**: Clean Architecture encourages dividing the system into independent modules, which is facilitated by Java's package system.
   
-- **Testabilidade**: A separação clara de responsabilidades permite a fácil criação de testes unitários, integrados e de aceitação, garantindo a qualidade e robustez do sistema.
+- **Testability**: Clear separation of responsibilities enables easy creation of unit, integration, and acceptance tests, ensuring system quality and robustness.
 
-- **Manutenibilidade**: Com uma estrutura bem definida e separação de camadas, é mais fácil entender e dar manutenção ao código ao longo do tempo.
+- **Maintainability**: With a well-defined structure and layer separation, it's easier to understand and maintain the code over time.
 
-- **Independência de Frameworks**: A Clean Architecture promove a dependência mínima de frameworks externos, permitindo que o código Java seja facilmente migrado e adaptado a novas tecnologias.
+- **Framework Independence**: Clean Architecture promotes minimal dependency on external frameworks, allowing Java code to be easily migrated and adapted to new technologies.
 
-## Componentes da Clean Architecture em Java
-1. **Entidades**: Representações de conceitos de negócio do sistema.
+## 🛠️ Components of Clean Architecture in Java
+1. **Entities**: Representations of business concepts of the system.
   
-2. **Casos de Uso (Use Cases)**: Representam as funcionalidades do sistema e implementam as regras de negócio.
+2. **Use Cases**: Represent the system's functionalities and implement business rules.
 
-3. **Interfaces de Fronteira (Boundary Interfaces)**: São as interfaces de entrada e saída do sistema, como interfaces de usuário, APIs ou bancos de dados.
+3. **Boundary Interfaces**: Are the system's input and output interfaces, such as user interfaces, APIs, or databases.
 
-4. **Frameworks e Drivers**: São os elementos externos ao sistema, como frameworks web, bibliotecas de persistência, etc.
+4. **Frameworks and Drivers**: Are the elements external to the system, such as web frameworks, persistence libraries, etc.
 
-## Exemplo de Implementação
+## 📄 Example Implementation
 ```java
 package cleanarchitecture.app.application.usecases.user;
 
